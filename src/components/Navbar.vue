@@ -27,6 +27,7 @@ const logoutUser = () => {
 };
 
 const authMethods = await $pb?.collection("users").listAuthMethods();
+console.log(authMethods?.authProviders);
 const twitchAuth = authMethods?.authProviders.find(
   (provider) => provider.name === "twitch"
 );
