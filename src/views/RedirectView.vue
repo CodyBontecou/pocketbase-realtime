@@ -35,7 +35,7 @@ const authUser = async () => {
       ?.collection("users")
       .authWithOAuth2(
         provider.name,
-        queryParams.code,
+        queryParams.code as string,
         provider.codeVerifier,
         redirectUrl
       );
