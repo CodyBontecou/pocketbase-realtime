@@ -14,7 +14,8 @@ interface AuthProviderInfo {
 export const useProviderStore = defineStore("provider", () => {
   const provider = ref(useLocalStorage("provider", {} as AuthProviderInfo));
 
-  const setProvider = (val: AuthProviderInfo) => (provider.value = val);
+  const setProvider = (val: AuthProviderInfo | undefined) =>
+    (provider.value = val);
 
   return { provider, setProvider };
 });
