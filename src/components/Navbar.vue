@@ -30,8 +30,7 @@ const authMethods = await $pb?.collection("users").listAuthMethods();
 const twitchAuth = authMethods?.authProviders.find(
   (provider) => provider.name === "twitch"
 );
-const redirectUrl =
-  "https://6174-2603-800c-24f0-8460-5c8d-5452-df00-3d2a.ngrok.io/redirect";
+const redirectUrl = "https://pocketbase-realtime.vercel.app/redirect";
 const authUrl = twitchAuth?.authUrl + redirectUrl;
 </script>
 

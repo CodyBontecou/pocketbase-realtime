@@ -25,8 +25,7 @@ if (provider.state !== queryParams.state) {
   throw "State parameters don't match.";
 }
 
-const redirectUrl =
-  "https://6174-2603-800c-24f0-8460-5c8d-5452-df00-3d2a.ngrok.io/redirect";
+const redirectUrl = "https://pocketbase-realtime.vercel.app/redirect";
 
 const authUser = async () => {
   try {
